@@ -1,0 +1,22 @@
+{
+	// Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+	// Pointez pour afficher la description des attributs existants.
+	// Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "SRC",
+			"runtimeExecutable": "npx",
+			"runtimeArgs": ["babel-node", "--inspect", "--inspect-brk=48985", "--nolazy"],
+			"skipFiles": ["${workspaceFolder}/node_modules/**/*.js", "<node_internals>/**/*.js"],
+
+			"program": "${workspaceFolder}/src/index.js",
+			"port": 48985,
+			"smartStep": true,
+			"sourceMaps": true,
+			"autoAttachChildProcesses": true
+		}
+	]
+}
