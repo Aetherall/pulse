@@ -17,6 +17,47 @@
 			"smartStep": true,
 			"sourceMaps": true,
 			"autoAttachChildProcesses": true
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "File babel",
+			"runtimeExecutable": "npx",
+			"runtimeArgs": ["babel-node", "-r", "${workspaceFolder}/keepalive.js", "--inspect", "--inspect-brk=48985", "--nolazy"],
+			"skipFiles": ["${workspaceFolder}/node_modules/**/*.js", "<node_internals>/**/*.js"],
+			"program": "${file}",
+			"port": 48985,
+			"smartStep": true,
+			"sourceMaps": true,
+			"autoAttachChildProcesses": true
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "File",
+			"runtimeExecutable": "node",
+			"skipFiles": ["${workspaceFolder}/node_modules/**/*.js", "<node_internals>/**/*.js"],
+			"program": "${file}"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "File keepalive mjs",
+			"runtimeArgs": ["-r", "${workspaceFolder}/keepalive.js", "--experimental-modules"],
+			"runtimeExecutable": "node",
+			"skipFiles": ["${workspaceFolder}/node_modules/**/*.js", "<node_internals>/**/*.js"],
+			"program": "${file}",
+			"autoAttachChildProcesses": false
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "SRC => INDEX",
+			"runtimeArgs": ["-r", "${workspaceFolder}/keepalive.js", "--experimental-modules"],
+			"runtimeExecutable": "node",
+			"skipFiles": ["${workspaceFolder}/node_modules/**/*.js", "<node_internals>/**/*.js"],
+			"program": "${workspaceFolder}/src/index.mjs",
+			"autoAttachChildProcesses": false
 		}
 	]
 }

@@ -1,6 +1,8 @@
 {
 	"scripts": {
-		"compile": "babel src -d dist"
+		"compile": "babel src -d dist",
+		"watch": "nodemon --inspect app.js",
+		"db": "cd mongodb && run-rs --version 4.0.0"
 	},
 	"dependencies": {
 		"@babel/cli": "^7.0.0-beta.49",
@@ -13,13 +15,8 @@
 		"@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.49",
 		"@babel/preset-react": "^7.0.0-beta.49",
 		"@babel/register": "^7.0.0-beta.49",
-		"graphql": "^0.13.2",
-		"graphql-judo": "^1.2.1",
-		"graphql-tag": "^2.9.2",
-		"jsdom-quokka-plugin": "^1.0.13",
-		"merge-graphql-schemas": "https://github.com/Aetherall/merge-graphql-schemas",
+		"mongodb": "^3.1.1",
 		"pluralize": "^7.0.0",
-		"prisma-binding": "^2.0.2",
 		"react": "^16.4.0",
 		"react-dom": "^16.4.0",
 		"source-map-support": "^0.5.6"

@@ -1,0 +1,10 @@
+Join object and object state
+
+Unique object for each cache could cause problems
+
+Not unique arrays use cases
+
+promise based Saver class (await for local pointer to be inserted in db)
+
+proxy IE11
+
